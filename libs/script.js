@@ -17,7 +17,6 @@ function fetchData()
                 });
                 for(var data1=0;data1<json.length;data1++)
                 {
-                    
                     var splitDate = json[data1].birthday.split("/");                
                     splitDate[2]=givenYear;                
                     var bdate = new Date(splitDate.join("/"));                
