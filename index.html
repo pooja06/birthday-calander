@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Birthday Calander</title>        
+        <link rel="stylesheet" href="stylesheets/screen.css">
+		<script src="libs/jquery.min.js"></script>	
+		<script src="libs/script.js"></script>	
+    </head>
+    <body>
+        <header>	    	
+        	Birthday Cal
+		</header>
+		<div id="container">
+			<div class="cardsParent">
+				<div class="title">MON</div>
+				<div id='day1' class="cards">
+				</div>	
+			</div>
+			<div class="cardsParent">
+				<div class="title">Tuesday</div>
+				<div id='day2' class="cards">
+				</div>	
+			</div>
+			<div class="cardsParent">
+				<div class="title">WED</div>
+				<div id='day3' class="cards">
+				</div>	
+			</div>
+			<div class="cardsParent">
+				<div class="title">THUR</div>
+				<div id='day4' class="cards">
+				</div>	
+			</div>
+			<div class="cardsParent">
+				<div class="title">FRI</div>
+				<div id='day5' class="cards">
+				</div>	
+			</div>
+			<div class="cardsParent">
+				<div class="title">SAT</div>
+				<div id='day6' class="cards">
+				</div>	
+			</div>
+			<div class="cardsParent">
+				<div class="title">SUN</div>
+				<div id='day0' class="cards">
+				</div>	
+			</div>
+			<textarea id="readFile" rows="20" cols="90"></textarea>
+			<label>Year</label>
+			<input type="text" id="yearVal">
+			<input type="submit" value="UPDATE" id="update" onclick="fetchData();">
+		</div>
+    </body>
+</html>

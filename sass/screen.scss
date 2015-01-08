@@ -1,0 +1,108 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/typography";
+@import "compass/reset";
+@import "compass/css3";
+$colors: #545C7A, #9ED301, #C97D99, #78C9E4, #E74829, #0154CF,#FF1BAA,#0DCCFE,#FE9B01;
+$bgColor:#A39BCD;
+body
+{
+  font-family:arial; 
+  background-color: rgb(239, 249, 252);
+}
+#container
+{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.cardsParent
+{
+  padding: 0;
+  margin: 5px;
+  width: 150px;
+  height: 180px;
+  background-color:white;
+  display:inline-block;
+  border:1px solid rgb(171, 171, 171);
+  .title
+  {
+    background-color:$bgColor;    
+    height:30px;
+    padding:0px 5px; 
+    font-family:arial;
+    color:white;
+    line-height:30px;
+    text-align: right;
+  }
+}
+.cards {
+  padding: 0;
+  width: 150px;
+  height: 150px;
+  background-color:white;      
+  div {    
+    text-align: center;
+    width:50px;
+    height:50px;
+    vertical-align: middle;
+    float:left;
+    color: white;
+    font-family:arial;
+    
+  }
+  @for $i from 1 through length($colors) {
+    div:nth-child(#{length($colors)}n+#{$i}) {
+        background: nth($colors, $i)
+    }
+  }
+  
+}
+#readFile
+{
+  position: absolute;
+  top: 270px;
+  left: 107px;
+  overflow: hidden;
+}
+input[type="text"]
+{
+  position: absolute;
+  top: 300px;
+  left: 850px;
+  width: 250px;
+  height: 40px;
+  font-size: 22px;
+}
+input[type="submit"]
+{
+  position: absolute;
+  top: 360px;
+  left: 850px;
+  width: 150px;
+  height: 60px;
+  background-color: #115BBE;
+  border-radius: 5px;
+  border: 1px solid #0185EE;
+  font-size: 22px;
+  color: lightblue;
+  cursor: pointer;
+}
+header
+{
+  text-align: center;
+  font-size: 33px;
+  margin: 10px;
+  color: grey;
+}
+label
+{
+  position: absolute;
+  top: 270px;
+  left: 850px;
+  font-size: 20px;
+  color: rgb(100, 100, 100);
+}
