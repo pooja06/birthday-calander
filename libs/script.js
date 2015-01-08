@@ -1,3 +1,27 @@
+$(document).ready(function(e){        
+    $('input[type="text"]').live('keypress',function(e) {
+        e.keyCode = (e.keyCode != 0)?e.keyCode:e.which; 
+        var a = [];
+        var k = e.which;
+
+        for (x = 48; x < 58; x++)
+            a.push(x);
+            
+        if (!($.inArray(k,a)>=0) && e.keyCode != 9 && e.keyCode != 8 && e.keyCode != 45 && e.keyCode != 13)
+        {
+            e.preventDefault();                   
+            alert("please enter valid year only");
+        }
+        if(($(this).val().length+1)>4 && e.keyCode != 8 && e.keyCode != 13)
+        {
+            e.preventDefault();
+            
+        }
+    });        
+
+});
+
+
 function fetchData()
 {  
     var givenYear = $("#yearVal").val();    
@@ -38,6 +62,10 @@ function fetchData()
                 }                
             }
         });        
+    }
+    else
+    {
+        alert("Please enter given year");
     }    
 }
 var calculateAge = function(birthday) {
