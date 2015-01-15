@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Birthday Calander</title>        
         <link rel="stylesheet" href="stylesheets/screen.css">
 		<script src="libs/jquery-1.7.1.min.js"></script>	
@@ -12,14 +13,14 @@
         	Birthday Calander
 		</header>
 		<div id="container">
-			<div id="cardContainer">
+			<div id="cardContainer" class="notFilled">
 				<div class="cardsParent">
 					<div class="title">MON</div>
 					<div id='day1' class="cards">
 					</div>	
 				</div>
 				<div class="cardsParent">
-					<div class="title">Tuesday</div>
+					<div class="title">TUE</div>
 					<div id='day2' class="cards">
 					</div>	
 				</div>
@@ -49,8 +50,8 @@
 					</div>	
 				</div>
 			</div>
-			<div id="otherPart">
-				<textarea id="readFile" rows="20" cols="90"></textarea>
+			<div id="formContainer">
+				<textarea id="readFile" class="notFilled" rows="20" cols="90"></textarea>
 				<div id="inputContainer">
 					<label>Year</label>
 					<input type="text" id="yearVal">

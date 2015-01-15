@@ -1,30 +1,73 @@
-/* line 5, ../sass/screen.scss */
+/* line 10, ../sass/screen.scss */
 body {
   font-family: arial;
   background-color: #eff9fc;
 }
 
-/* line 10, ../sass/screen.scss */
+/* line 15, ../sass/screen.scss */
+input[type="text"] {
+  width: 250px;
+  height: 40px;
+  font-size: 22px;
+  display: block;
+  margin-top: 20px;
+}
+
+/* line 23, ../sass/screen.scss */
+input[type="submit"] {
+  width: 150px;
+  height: 60px;
+  background-color: #115BBE;
+  border-radius: 5px;
+  border: 1px solid #115BBE;
+  font-size: 22px;
+  color: lightblue;
+  cursor: pointer;
+  display: block;
+  margin-top: 20px;
+}
+@media screen and (max-width: 700px) {
+  /* line 23, ../sass/screen.scss */
+  input[type="submit"] {
+    width: 253px;
+  }
+}
+
+/* line 39, ../sass/screen.scss */
+header {
+  text-align: center;
+  font-size: 33px;
+  margin: 10px;
+  color: grey;
+}
+
+/* line 46, ../sass/screen.scss */
+label {
+  font-size: 20px;
+  color: #646464;
+}
+
+/* line 51, ../sass/screen.scss */
 #container {
   width: 100%;
   height: 100%;
 }
 
-/* line 15, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 #cardContainer {
   width: 100%;
   height: 100%;
   text-align: center;
 }
 
-/* line 21, ../sass/screen.scss */
-#otherPart {
+/* line 62, ../sass/screen.scss */
+#formContainer {
   width: 100%;
   height: 100%;
   text-align: center;
 }
 
-/* line 27, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 #inputContainer {
   display: inline-block;
   margin-left: 30px;
@@ -32,13 +75,35 @@ body {
   text-align: left;
 }
 @media screen and (max-width: 700px) {
-  /* line 27, ../sass/screen.scss */
+  /* line 68, ../sass/screen.scss */
   #inputContainer {
     margin-left: 0px;
   }
 }
 
-/* line 37, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
+#readFile {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  vertical-align: top;
+  margin-top: 30px;
+}
+@media screen and (max-width: 700px) {
+  /* line 78, ../sass/screen.scss */
+  #readFile {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  /* line 89, ../sass/screen.scss */
+  .notFilled {
+    display: none;
+  }
+}
+
+/* line 95, ../sass/screen.scss */
 .cardsParent {
   padding: 0;
   margin: 5px;
@@ -46,7 +111,7 @@ body {
   display: inline-block;
   border: 1px solid #ababab;
 }
-/* line 44, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 .cardsParent .title {
   background-color: #A39BCD;
   height: 30px;
@@ -57,7 +122,7 @@ body {
   text-align: right;
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .cards {
   padding: 0;
   width: 150px;
@@ -65,13 +130,13 @@ body {
   background-color: white;
 }
 @media screen and (max-width: 700px) {
-  /* line 55, ../sass/screen.scss */
+  /* line 113, ../sass/screen.scss */
   .cards {
     width: 100px;
     height: 100px;
   }
 }
-/* line 64, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 .cards div {
   text-align: center;
   width: 50px;
@@ -82,103 +147,44 @@ body {
   font-family: arial;
   display: table;
 }
-/* line 73, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 .cards div span {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 80, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .cards div:nth-child(9n+1) {
   background: #545C7A;
 }
-/* line 80, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .cards div:nth-child(9n+2) {
   background: #9ED301;
 }
-/* line 80, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .cards div:nth-child(9n+3) {
   background: #C97D99;
 }
-/* line 80, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .cards div:nth-child(9n+4) {
   background: #78C9E4;
 }
-/* line 80, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .cards div:nth-child(9n+5) {
   background: #E74829;
 }
-/* line 80, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .cards div:nth-child(9n+6) {
   background: #0154CF;
 }
-/* line 80, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .cards div:nth-child(9n+7) {
   background: #FF1BAA;
 }
-/* line 80, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .cards div:nth-child(9n+8) {
   background: #0DCCFE;
 }
-/* line 80, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .cards div:nth-child(9n+9) {
   background: #FE9B01;
-}
-
-/* line 86, ../sass/screen.scss */
-#readFile {
-  display: inline-block;
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-  vertical-align: top;
-  margin-top: 30px;
-}
-@media screen and (max-width: 700px) {
-  /* line 86, ../sass/screen.scss */
-  #readFile {
-    width: 100%;
-  }
-}
-
-/* line 98, ../sass/screen.scss */
-input[type="text"] {
-  width: 250px;
-  height: 40px;
-  font-size: 22px;
-  display: block;
-  margin-top: 20px;
-}
-
-/* line 106, ../sass/screen.scss */
-input[type="submit"] {
-  width: 150px;
-  height: 60px;
-  background-color: #115BBE;
-  border-radius: 5px;
-  border: 1px solid #0185EE;
-  font-size: 22px;
-  color: lightblue;
-  cursor: pointer;
-  display: block;
-  margin-top: 20px;
-}
-@media screen and (max-width: 700px) {
-  /* line 106, ../sass/screen.scss */
-  input[type="submit"] {
-    width: 253px;
-  }
-}
-
-/* line 122, ../sass/screen.scss */
-header {
-  text-align: center;
-  font-size: 33px;
-  margin: 10px;
-  color: grey;
-}
-
-/* line 129, ../sass/screen.scss */
-label {
-  font-size: 20px;
-  color: #646464;
 }

@@ -31,6 +31,7 @@ function fetchData()
     $(".cards").html("");
     if(givenYear!="")
     {    
+        $("#cardContainer,#readFile").removeClass("notFilled");
         if(dataToShow=="")
         {
             $.ajax({
@@ -72,8 +73,7 @@ function showData(givenYear)
         for(var i=0;i<nameArr.length;i++)
         {
             nameArr[i]=nameArr[i].substr(0,nameArr[i].length-1);                 
-            var lengthForDays = nameArr[i].split("|").length;
-            /*var boxWidth = parseInt($(".cards").css("width"))/Math.ceil(Math.sqrt(lengthForDays)); */
+            var lengthForDays = nameArr[i].split("|").length;            
             var boxWidth = 100/Math.ceil(Math.sqrt(lengthForDays)); 
             var boxHeight = 100/Math.ceil(Math.sqrt(lengthForDays)); 
             var lineHeight = parseInt($(".cards").css("height"))/Math.ceil(Math.sqrt(lengthForDays)); 
