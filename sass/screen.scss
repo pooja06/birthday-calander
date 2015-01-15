@@ -1,5 +1,7 @@
 $colors: #545C7A, #9ED301, #C97D99, #78C9E4, #E74829, #0154CF,#FF1BAA,#0DCCFE,#FE9B01;
 $bgColor:#A39BCD;
+$break-small: 700px;
+
 body
 {
   font-family:arial; 
@@ -27,14 +29,15 @@ body
   display: inline-block;
   margin-left: 30px;
   margin-top: 30px;
+  @media screen and (max-width: $break-small) {
+    margin-left:0px;
+  }
   text-align: left;
 }
 .cardsParent
 {
   padding: 0;
-  margin: 5px;
-  width: 150px;
-  height: 180px;
+  margin: 5px;  
   background-color:white;
   display:inline-block;
   border:1px solid rgb(171, 171, 171);
@@ -52,7 +55,11 @@ body
 .cards {
   padding: 0;
   width: 150px;
-  height: 150px;
+  height: 150px;  
+  @media screen and (max-width: $break-small) {
+    width: 100px;
+    height: 100px;
+  }
   background-color:white;      
   div {    
     text-align: center;
@@ -62,6 +69,11 @@ body
     float:left;
     color: white;
     font-family:arial;
+    display: table;
+    span{
+        display: table-cell;
+        vertical-align: middle;
+    }
     
   }
   @for $i from 1 through length($colors) {
@@ -75,6 +87,9 @@ body
 {  
   display: inline-block;
   width: 50%;
+  @media screen and (max-width: $break-small) {
+    width: 100%;    
+  }
   height: 100%;
   overflow: hidden;
   vertical-align: top;
@@ -91,6 +106,9 @@ input[type="text"]
 input[type="submit"]
 {  
   width: 150px;
+  @media screen and (max-width: $break-small) {
+    width: 253px;    
+  }
   height: 60px;
   background-color: #115BBE;
   border-radius: 5px;

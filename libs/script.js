@@ -73,12 +73,14 @@ function showData(givenYear)
         {
             nameArr[i]=nameArr[i].substr(0,nameArr[i].length-1);                 
             var lengthForDays = nameArr[i].split("|").length;
-            var boxWidth = parseInt($(".cards").css("width"))/Math.ceil(Math.sqrt(lengthForDays)); 
-            var boxHeight = parseInt($(".cards").css("height"))/Math.ceil(Math.sqrt(lengthForDays)); 
+            /*var boxWidth = parseInt($(".cards").css("width"))/Math.ceil(Math.sqrt(lengthForDays)); */
+            var boxWidth = 100/Math.ceil(Math.sqrt(lengthForDays)); 
+            var boxHeight = 100/Math.ceil(Math.sqrt(lengthForDays)); 
+            var lineHeight = parseInt($(".cards").css("height"))/Math.ceil(Math.sqrt(lengthForDays)); 
             for(var j=0;j<lengthForDays;j++)
             {
                 if(nameArr[i].split("|")[j]!="")
-                    $("#day"+i).append("<div style='width:"+boxWidth+"px;height:"+boxHeight+"px;line-height:"+boxHeight+"px;'>"+nameArr[i].split("|")[j]+"</div>");
+                    $("#day"+i).append("<div class='cardsChild' style='width:"+boxWidth+"%;height:"+boxHeight+"%;'><span>"+nameArr[i].split("|")[j]+"</span></div>");
             }               
         }
 }
